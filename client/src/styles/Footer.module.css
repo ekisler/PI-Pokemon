@@ -1,0 +1,32 @@
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:10vh;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #2ae711;
+  /* background-color: #f7de82; AMARILLO */
+}
+
+.footer .contactInfo {
+    display: flex;
+    margin: 0 4rem 0 5rem ;
+    align-items: center;
+    
+}
+.footer a {
+  margin: 2px 2px 2px 2px;
+  color:black;
+  font-weight: bold;
+}
+.icons {
+  color: black;
+}
+.footer p {
+  color: #1e0ff0;
+    font-size: 90%;
+    transition: all 0.3s;
+}
+

@@ -1,0 +1,31 @@
+.container {
+  background-image: url("../assets/pageNotFound.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pokemonsNotFound {
+  background-image: url("../assets/pokemonNotFound.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.p_pokemonNotFound {
+  margin: 10px 0 30px 0;
+  font-family: "Arial", sans-serif;
+  color: #0816db;
+  letter-spacing: 1.5px;
+  font-size: 150%;
+  text-transform: none;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+}

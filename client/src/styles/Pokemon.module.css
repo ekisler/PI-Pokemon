@@ -1,0 +1,295 @@
+:root {
+  /* --black-contrast: #0b0f10; */
+  --black-contrast: #21292c;
+  --blue-bootstrap: #007bff;
+  --absolute-white: #fff;
+  --absolute-black: #000;
+  --trasition-blue: #1f65b6;
+  --btn-gray: #d0d1d1;
+  --hover-gray: #818081;
+  --steel-color: #b1a7ba;
+  --water-color: #4592c4;
+  --bug-color: #39fd08;
+  --dragon-color: #7365ab;
+  --electric-color: #eed535;
+  --ghost-color: #6d6895;
+  --fire-color: #fd7d24;
+  --fairy-color: #fdb9e9;
+  --ice-color: #90d9e5;
+  --fighting-color: #dc9c8f;
+  --normal-color: #a4acaf;
+  --grass-color: #07fc13;
+  --psychic-color: #f89dbb;
+  --rock-color: #bba96f;
+  --dark-color: #4f4436;
+  --ground-color: #ecd495;
+  --poison-color: #ff0d0d;
+  --flying-color: #6590c8;
+  --unknown-color: #699d8e;
+  --shadow-color: #000000;
+  --soft-gray: #eee;
+}
+
+.card {
+  width: 180px;
+  margin: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  position: relative;
+  /* height: 40px; */
+}
+
+.card .cover {
+  width: 100%;
+  /* height: 220px; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(219, 219, 219);
+  opacity: 0.8;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.card .cover img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 5px;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 12px;
+}
+
+.card .img__back {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  background-size: cover;
+  border-radius: 20px;
+  transition: all 300ms;
+}
+
+.card .description {
+  background: rgb(252, 252, 252);
+  opacity: 0.8;
+  margin-top: -15px;
+  padding: 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card .description h2 {
+  margin-top: 10px;
+  font-family: "Flexo-Demi", arial, sans-serif;
+  color: #313131;
+  font-size: 120%;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+
+.card .description .typesContainer p {
+  margin-top: 10px;
+  font-family: "Flexo-Medium", arial, sans-serif;
+  font-size: 11px;
+  padding: 5px;
+  margin-right: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+.card .description .idPokemon {
+  font-family: "Flexo-Bold", arial, sans-serif;
+  color: #5c5a5a;
+  font-size: 80%;
+  padding-top: 2px;
+}
+
+.card .description button {
+  padding: 6px 20px;
+  margin-top: 20px;
+  border: none;
+  background: #0408e0;
+  color: rgb(241, 181, 181);
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 300ms;
+}
+
+.card .description button:hover {
+  background: #d8fd06;
+}
+
+.card .description .typesContainer {
+  display: flex;
+}
+
+.normal {
+  padding: 3px;
+  border: solid 2px var(--normal-color);
+  background-color: var(--normal-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fighting {
+  padding: 3px;
+  border: solid 2px var(--fighting-color);
+  background-color: var(--fighting-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.flying {
+  padding: 3px;
+  border: solid 2px var(--flying-color);
+  background-color: var(--flying-color);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.poison {
+  padding: 3px;
+  border: solid 2px var(--poison-color);
+  background-color: var(--poison-color);
+  color: var(--absolute-white);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ground {
+  padding: 3px;
+  border: solid 2px var(--ground-color);
+  background-color: var(--ground-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.rock {
+  padding: 3px;
+  border: solid 2px var(--rock-color);
+  background-color: var(--rock-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.bug {
+  padding: 3px;
+  border: solid 2px var(--bug-color);
+  background-color: var(--bug-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ghost {
+  padding: 3px;
+  border: solid 2px var(--ghost-color);
+  background-color: var(--ghost-color);
+  color: var(--absolute-white);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.steel {
+  padding: 3px;
+  border: solid 2px var(--steel-color);
+  background-color: var(--steel-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fire {
+  padding: 3px;
+  border: solid 2px var(--fire-color);
+  background-color: var(--fire-color);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.water {
+  padding: 3px;
+  border: solid 2px var(--water-color);
+  background-color: var(--water-color);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.grass {
+  padding: 3px;
+  border: solid 2px var(--grass-color);
+  background-color: var(--grass-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.electric {
+  padding: 3px;
+  border: solid 2px var(--electric-color);
+  background-color: var(--electric-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.psychic {
+  padding: 3px;
+  border: solid 2px var(--psychic-color);
+  background-color: var(--psychic-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ice {
+  padding: 3px;
+  border: solid 2px var(--ice-color);
+  background-color: var(--ice-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dragon {
+  padding: 3px;
+  border: solid 2px var(--dragon-color);
+  background-color: var(--dragon-color);
+  color: var(--absolute-white);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dark {
+  padding: 3px;
+  border: solid 2px var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--absolute-white);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fairy {
+  padding: 3px;
+  border: solid 2px var(--fairy-color);
+  background-color: var(--fairy-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.unknown {
+  padding: 3px;
+  border: solid 2px var(--unknown-color);
+  background-color: var(--unknown-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.shadow {
+  padding: 3px;
+  border: solid 2px var(--shadow-color);
+  background-color: var(--shadow-color);
+  color: var(--absolute-white);
+  border-radius: 8px;
+  text-align: center;
+}

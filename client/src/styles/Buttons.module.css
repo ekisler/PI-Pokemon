@@ -1,0 +1,166 @@
+/* Pagination */
+.wrapperPagination {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__item {
+  display: inline-block;
+  margin: 0 10px;
+}
+.prevNextPageBtn {
+  /* Remove default style of button */
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  /*  */
+  font-size: 35px;
+  color: #2409be;
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.prevNextPageBtn:hover {
+  transform: scale(1.1);
+}
+.pagination__link {
+  /* Remove default style of button */
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  /*           */
+  position: relative;
+  text-indent: -99em;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.pagination__link:before,
+.pagination__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #9098a9;
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.pagination__link:before {
+  background: #1403af;
+  transform: scale(0.4);
+}
+.pagination__link:hover:after {
+  transform: scale(1.1);
+}
+.pagination__link.is_active:before {
+  transform: scale(0.5);
+}
+.pagination__link.is_active:after {
+  transform: scale(0.2);
+}
+
+/*            */
+
+/* Create and back button*/
+.btn {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385; 
+  margin-bottom: 100px;
+  margin-left: 30px;
+  margin-top: 10px;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.btn:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+.btnMargin {
+  margin: 40px 0 0 90px;
+}
+
+/* Refresh Button */
+.homeBtn {
+  /* Remove default style of button */
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  background-image: url("../assets/homeButton.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  /* position: absolute;
+  left: 250px;
+  top: 130px; */
+  transition: transform 1.3s ease-in-out; /* Spin animation */
+}
+
+.homeBtn:hover {
+  transform: rotate(1500deg) scale(1.3);
+}
+
+/* Close Btn */
+.deleteBtn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  opacity: 0.3;
+  z-index: 100;
+}
+.deleteBtn:hover {
+  opacity: 1;
+}
