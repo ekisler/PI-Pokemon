@@ -7,9 +7,10 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT, DATABASE_URL } = proces
 const sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
-      database_url: DATABASE_URL,
         database: DB_NAME,
         dialect: "postgres",
+        protocol: "postgres",
+        dialectOptions: {},
         host: DB_HOST,
         db_port: DB_PORT,
         username: DB_USER,
