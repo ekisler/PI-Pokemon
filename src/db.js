@@ -20,7 +20,9 @@ const sequelize =
         },
         
       })
-    : new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`, {
+    : new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@ec2-35-168-122-84.compute-1.amazonaws.com:${DB_NAME}`, {
+      //postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon
+      
         logging: false, // set to console.log to see the raw SQL queries
         native: false, // lets Sequelize know we can use pg-native for ~30% more speed
       });
