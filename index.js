@@ -17,23 +17,13 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const path = require('path')
-const express = require('express');
+
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
 const {PORT} = require("./src/utils/config")
-const dotenv = require('dotenv').config();
 
-// Serve frontend
-if(process.env.NODE_ENV === 'production') {
-  server.use(express.static(path.join(__dirname, '../client/build')))
-  
-  server.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
-  )
-)
-} else {
-  server.get('/', (req, res) => res.send('Please set to production'))
-}
+
+
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
