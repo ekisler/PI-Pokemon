@@ -1,12 +1,9 @@
 //Componente que renderizará los componente Pokemon
 
 import { useSelector, useDispatch } from "react-redux";
-import { pokemonContainer } from "../../styles/PokemonsContainer.module.css";
+import { default as styles } from "../../styles/PokemonsContainer.module.css";
 import Pokemon from "../presentationals/Pokemon";
-import {
-  pokemonsNotFound,
-  p_pokemonNotFound,
-} from "../../styles/PageNotFound.module.css";
+import {default as styles1 } from "../../styles/PageNotFound.module.css";
 import { clearPokemons, deletePokemon, getPokemons } from "../../actions";
 
 function PokemonsContainer({ lastItemIndex, firstItemIndex }) {
@@ -23,7 +20,7 @@ function PokemonsContainer({ lastItemIndex, firstItemIndex }) {
   return (
     <>
       {pokemons.length !== 0 ? (
-        <div className={pokemonContainer}>
+        <div className={styles.pokemonContainer}>
           {Array.isArray(pokemons) === false ? (
             <>
               <Pokemon
@@ -46,8 +43,8 @@ function PokemonsContainer({ lastItemIndex, firstItemIndex }) {
         </div> 
       ) : (
         <>
-          <p className={p_pokemonNotFound}>No hay Pokemon</p>
-          <div className={pokemonsNotFound} />
+          <p className={styles1.p_pokemonNotFound}>No hay Pokemon</p>
+          <div className={styles1.pokemonsNotFound} />
         </>
       )}
     </>

@@ -5,7 +5,6 @@ import { clearPokemons, getTypes, saveNewPokemon } from "../actions";
 import BackBtn from "./buttons/BackBtn";
 import validateForm from "../utils/validateForm";
 import styles from "../styles/Form.module.css";
-import Footer from "../../src/components/presentationals/Footer";
 
 function Create() {
   const [dataForm, setDataForm] = useState({
@@ -218,7 +217,8 @@ function Create() {
             <label htmlFor="speed">Velocidad:</label>
             {error.speed && <p>{error.speed}</p>}
           </div>
-        </div>      <h3>Tipo</h3>
+        </div>{" "}
+        <h3>Tipo</h3>
         <div className={styles.typesContainer}>
           {types?.map((type) => {
             return (
@@ -233,9 +233,7 @@ function Create() {
                 <label>{type.name}</label>
               </div>
             );
-            
           })}
-         
         </div>
         {dataForm.types.length > 2 && <p>Escoja solo 2 Tipos</p>}
         <input
@@ -245,9 +243,7 @@ function Create() {
           className={`${styles.form_button} ${disabled || styles.is_valid}`}
         />
       </form>
-      <Footer />
-      
-    </div>    
+    </div>
   );
 }
 

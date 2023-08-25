@@ -1,8 +1,8 @@
 import React from "react";
-import { container } from "../../styles/PageNotFound.module.css";
+import { default as styles } from "../../styles/PageNotFound.module.css";
 
 const PageNotFound = () => {
-  return <div className={container}></div>;
+  return <div className={styles.container}></div>;
 };
 
 export default PageNotFound;

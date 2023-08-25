@@ -5,8 +5,8 @@ import { clearPokemons, getPokemonById } from "../../actions";
 import PokemonDetail from "../presentationals/PokemonDetail";
 import BackBtn from "../buttons/BackBtn";
 import spinner from "../../assets/spinner2.gif";
-import { btnMargin } from "../../styles/Buttons.module.css";
-import { spinnerStyle, spinnerContainer } from "../../styles/Home.module.css";
+import { default as styles } from "../../styles/Buttons.module.css";
+import { default as styles1 } from "../../styles/Home.module.css";
 
 function DetailContainer() {
   const pokemon = useSelector((state) => state.pokemon);
@@ -21,14 +21,14 @@ function DetailContainer() {
 
   return (
     <div>
-      <div className={btnMargin}>
+      <div className={styles.btnMargin}>
         <BackBtn />
       </div>
 
       {spinnerLoader ? (
-        <div className={spinnerContainer}>
+        <div className={styles1.spinnerContainer}>
           {" "}
-          <img src={spinner} alt="...loading" className={spinnerStyle} />
+          <img src={spinner} alt="...loading" className={styles1.spinnerStyle} />
         </div>
       ) : (
         <PokemonDetail pokemonDetail={pokemon} />

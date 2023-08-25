@@ -1,12 +1,5 @@
 //Componente que renderiza los botones, y les asocia un evento para modificar el estado local de pokemonContainer
-import {
-  wrapperPagination,
-  pagination,
-  pagination__item,
-  pagination__link,
-  is_active,
-  prevNextPageBtn,
-} from "../styles/Buttons.module.css";
+import { default as styles } from "../styles/Buttons.module.css";
 
 function Pagination({ items, quantityXPage, handlePagination, currentPage }) {
   //handlePagination, función que setea la currentPage de mi container
@@ -19,12 +12,12 @@ function Pagination({ items, quantityXPage, handlePagination, currentPage }) {
   }
 
   return (
-    <div className={wrapperPagination}>
+    <div className={styles.wrapperPagination}>
       {pageNumbers.length !== 0 && (
-        <ul className={pagination}>
-          <li className={pagination__item}>
+        <ul className={styles.pagination}>
+          <li className={styles.pagination__item}>
             <button
-              className={prevNextPageBtn}
+              className={styles.prevNextPageBtn}
               onClick={() => {
                 if (currentPage > 1) return handlePagination(currentPage - 1);
               }}
@@ -34,10 +27,10 @@ function Pagination({ items, quantityXPage, handlePagination, currentPage }) {
           </li>
           {pageNumbers?.map((pageNumber) => {
             return (
-              <li className={pagination__item} key={pageNumber}>
+              <li className={styles.pagination__item} key={pageNumber}>
                 <button
-                  className={`${pagination__link} ${
-                    pageNumber === currentPage ? is_active : ""
+                  className={`${styles.pagination__link} ${
+                    pageNumber === currentPage ? styles.is_active : ""
                   }`}
                   onClick={() => {
                     return handlePagination(pageNumber);
@@ -48,9 +41,9 @@ function Pagination({ items, quantityXPage, handlePagination, currentPage }) {
               </li>
             );
           })}
-          <li className={pagination__item}>
+          <li className={styles.pagination__item}>
             <button
-              className={prevNextPageBtn}
+              className={styles.prevNextPageBtn}
               onClick={() => {
                 if (currentPage < pageNumbers.length)
                   return handlePagination(currentPage + 1);

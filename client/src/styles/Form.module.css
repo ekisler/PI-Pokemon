@@ -6,7 +6,6 @@
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: -1%;
-  
   box-sizing: content-box;
   width: 95%;
  }
@@ -46,15 +45,15 @@
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
+
 .formContainer h1 {
   color: #1e0cbd;
-  font-weight: 100;
-  font-weight: bold;
-  letter-spacing: 0.01em;
-  margin-left: 1px;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  margin: 0;
+  padding-left: 10px;
 }
 .creationForm .form_button {
   margin-top: 3px;
@@ -66,9 +65,9 @@
   box-sizing: border-box;
   padding: 2px 15px;
   border-radius: 10px;
-  color: #0004ff;
+  color: #18181b;
   font-weight: 100;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
   position: relative;
   z-index: 1;
 }
@@ -89,16 +88,16 @@ form .form_button.is_valid:focus {
 }
 .creationForm .question label {
   transform-origin: left center;
-  color: #0306b9;
-  font-weight: 100;
-  letter-spacing: 0.01em;
+  color: #0e0e14;
+  font-weight: 600;
+  letter-spacing: 0.11em;
   font-size: 17px;
   box-sizing: border-box;
   padding: 1px 5px;
   display: block;
   position: absolute;
   margin-top: -40px;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 .creationForm .question .input_form {
@@ -112,15 +111,15 @@ form .form_button.is_valid:focus {
   box-sizing: border-box;
   padding: 10px 1px;
   border-radius: 10px;
-  color: #7aa7c7;
-  font-weight: 100;
+  color: #030303;
+  font-weight: 500;
   letter-spacing: 0.01em;
   position: relative;
   z-index: 1;
 }
 .creationForm .question .input_form:focus {
   outline: none;
-  background: #7aa7c7;
+  background: #0f1011;
   color: white;
   margin-top: 30px;
 }
@@ -246,6 +245,10 @@ form .form_button.is_valid:focus {
 .Shadow[type="checkbox"]:checked ~ label {
   background-color: #000000;
   color: #ffff;
+}
+
+.formContainer .creationForm .creationFormGrid .question {
+  color: #000000;
 }
 
 @media (max-width: 1300px) {

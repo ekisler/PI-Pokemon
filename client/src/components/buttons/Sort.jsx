@@ -1,11 +1,11 @@
 import React from "react";
-import { select } from "../../styles/Select.module.css";
+import { default as styles } from "../../styles/Select.module.css";
 
 
 const Sort = ({ handleSort, sortDescription}) => {
 
   return (
-    <div className={select}>
+    <div className={styles.select}>
       <select
         name="sortOption"
         onChange={(e) => {

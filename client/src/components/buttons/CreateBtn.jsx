@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { btn } from "../../styles/Buttons.module.css";
+import { default as styles } from "../../styles/Buttons.module.css";
 
 const CreateBtn = () => {
   return (
     <div>
       <Link to="/create">
         {" "}
-        <button className={btn}>Crear Pokemon</button>
+        <button className={styles.btn}>Crear Pokemon</button>
       </Link>
     </div>
   );

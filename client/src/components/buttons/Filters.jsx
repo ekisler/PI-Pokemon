@@ -1,9 +1,9 @@
 import React from "react";
-import { select } from "../../styles/Select.module.css";
+import { default as styles } from "../../styles/Select.module.css";
 
 const Filters = ({ items, defaultDescription, handleFilter }) => {
   return (
-    <div className={select}>
+    <div className={styles.select}>
       <select
         name={{ defaultDescription }}
         onChange={(e) => handleFilter(e.target.value)}

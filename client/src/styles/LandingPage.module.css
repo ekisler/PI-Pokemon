@@ -1,5 +1,51 @@
+.background {
+  background: url("https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png")fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: -100px;
+  width: 100%;
+}
+
+.btnContainer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBtn {
+  position: absolute;
+  top: 43%;
+  transition: transform 0.7s ease-in-out; /* Spin animation */
+  background-image: url("../assets/homeButton.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+}
+
+.home_span {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif, sans-serif;
+  text-decoration: none;
+  color: #0716f3;
+  font-size: 49px;
+  letter-spacing: 2px;
+}
 
 .detailContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,47 +54,14 @@
   width: 100%;
 }
 
-.background {
-  background: url("https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png") fixed; 
-     height: 100vh; 
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-top: -100px;
-  width: 100%;
-}
-
-.homeBtn {
-  background-image: url("../assets/homeButton.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  left: 230px;
-  top: 250px;
-  transition: transform 0.7s ease-in-out; /* Spin animation */
-}
-
-
-
-.home_span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-  position: absolute;
-  left: 200px;
-  top: 165px;
-  text-decoration: none;
-  color: #0716f3;
-  font-size: 49px;
-  letter-spacing: 2px;
-}
-
 .homeBtn:hover {
   transform: rotate(360deg) scale(1.5);
+}
+
+.newPoke {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+  width: 250px;
+  height: 250px;
 }

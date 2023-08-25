@@ -14,27 +14,20 @@ import {
 } from "../../actions/index";
 import Pagination, { objIndexPagination } from "../Pagination";
 import spinner from "../../assets/spinner.gif";
-import {
-  homeContainer,
-  spinnerStyle,
-  refresh_span,
-} from "../../styles/Home.module.css";
-import Footer from "../presentationals/Footer";
+import { default as styles } from "../../styles/Home.module.css";
 
 function Home() {
   //Hooks para manejar el estado local y el renderizado de mi componente
   //eslint-disable-next-line
   const dispatch = useDispatch();
   const pokemons = useSelector((state) => state.pokemons);
-  const [sort, setSort] = useState(""); // Hook para manejar el ordenamiento. Necesario para que se modifique el estado del componente y así re-renderice
   const [currentPage, setCurrentPage] = useState(1); // Hook para manejar el paginado
-  const spinnerLoader = useSelector((state) => state.spinnerLoader); 
-  const quantityXPage = 4; //Cantidad pokemons por página
-  // const quantityXPage = 12; //Cantidad pokemons por página
+  const spinnerLoader = useSelector((state) => state.spinnerLoader);
+  const quantityXPage = 10; //Cantidad pokemons por página
 
   //Llamado a la API para obtener types y pokemons
   useEffect(() => {
-    dispatch(setLoaderTrue()); 
+    dispatch(setLoaderTrue());
     dispatch(getTypes());
     dispatch(getPokemons());
   }, [dispatch]);
@@ -42,24 +35,20 @@ function Home() {
   //Funciones de ordenamientos
   const handleSortAlph = (type) => {
     dispatch(sortPokemonsAlphabetically(type));
-    setSort(type);
     setCurrentPage(1);
   };
   const handleSortStrength = (type) => {
     dispatch(sortPokemonsByStrength(type));
-    setSort(type);
     setCurrentPage(1);
   };
 
   //Funciones de filtrado
   const handleTypeFilter = (type) => {
     dispatch(filterPokemonByType(type));
-    setSort(type);
     setCurrentPage(1);
   };
   const handleSourceFilter = (isCreated) => {
     dispatch(filterPokemonCreated(isCreated));
-    setSort(isCreated);
     setCurrentPage(1);
   };
 
@@ -80,7 +69,7 @@ function Home() {
   };
 
   return (
-    <div className={homeContainer}>
+    <div className={styles.homeContainer}>
       <div>
         <NavHome
           handleSortAlph={handleSortAlph}
@@ -91,7 +80,7 @@ function Home() {
       </div>
 
       <Refresh handleRefresh={handleRefresh} />
-      <span className={refresh_span}>Recargar</span>
+      <span className={styles.refresh_span}>Recargar</span>
       <>
         {!spinnerLoader ? (
           <Pagination
@@ -104,7 +93,7 @@ function Home() {
       </>
 
       {spinnerLoader ? (
-        <img src={spinner} alt="...Cargando" className={spinnerStyle} />
+        <img src={spinner} alt="...Cargando" className={styles.spinnerStyle} />
       ) : (
         <div>
           <PokemonsContainer
@@ -113,9 +102,9 @@ function Home() {
           />
         </div>
       )}
-      <Footer />
     </div>
   );
 }
 
 export default Home;
+

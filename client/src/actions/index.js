@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export const actionTypes = {
   GET_POKEMONS: "GET_POKEMONS",
   SEARCH_POKEMON: "SEARCH_POKEMON",
@@ -47,8 +46,6 @@ export function getTypes() {
   };
 }
 
-
-
 export function getPokemonById(id) {
   return function (dispatch) {
     return axios(`/pokemon/${id}`)
@@ -60,7 +57,7 @@ export function getPokemonById(id) {
       })
       .catch((e) => {
         console.log(e);
-        return alert( "¡Algo falló al cargar!");
+        return alert("¡Algo falló al cargar!");
       });
   };
 }
@@ -76,7 +73,7 @@ export function searchPokemon(name) {
       })
       .catch((e) => {
         console.log(e);
-        return alert( "¡Algo a fallado! -- ¡Pokemon no encontrado!");
+        return alert("¡Algo a fallado! -- ¡Pokemon no encontrado!");
       });
   };
 }
@@ -102,12 +99,14 @@ export function saveNewPokemon(pokemon) {
     return axios
       .post("/pokemons", pokemon)
       .then((resp) => {
-       alert ("¡Pokemon creado correctamente!");
+        alert("¡Pokemon creado correctamente!");
         return dispatch({ type: actionTypes.POST_POKEMON, payload: resp });
       })
       .catch((e) => {
         console.log(e);
-        return alert( "¡Nombre ya existe!<br> Por favor intente de nuevo con otro nombre");
+        return alert(
+          "¡Nombre ya existe!<br> Por favor intente de nuevo con otro nombre"
+        );
       });
   };
 }
@@ -151,7 +150,7 @@ export function deletePokemon(id) {
     return axios
       .delete(`/delete/${id}`)
       .then((response) => {
-          alert ("¡Pokemon borrado correctamente!");
+        alert("¡Pokemon borrado correctamente!");
         return dispatch({ type: actionTypes.DELETE_POKEMON });
       })
       .catch((e) => {

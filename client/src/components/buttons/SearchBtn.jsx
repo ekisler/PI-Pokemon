@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchPokemon } from "../../actions";
-import { searchBox, btnSearch, inputSearch } from "../../styles/SearchBtn.module.css";
+import { default as styles } from "../../styles/SearchBtn.module.css";
 
 function SearchBtn() {
   const [name, setName] = useState("");
@@ -19,15 +19,15 @@ function SearchBtn() {
   };
 
   return (
-    <div className={searchBox}>
+    <div className={styles.searchBox}>
       <form onSubmit={getPokemonbyName} name="search">
-      <button className={btnSearch}><i className="fas fa-search"></i></button>
+      <button className={styles.btnSearch}><i className="fas fa-search"></i></button>
         <input
           type="text"
           name="name"
           onChange={handleSearchName}
           autoComplete="off"
-          className={inputSearch}
+          className={styles.inputSearch}
           placeholder="Busca Poke"
         />
 

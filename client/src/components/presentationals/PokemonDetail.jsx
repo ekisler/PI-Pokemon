@@ -91,17 +91,9 @@ const PokemonDetail = ({ pokemonDetail }) => {
           <p>weight: {weight}</p>
         </div>
       </div>
-      <img src={urlImg} alt="Pokemon" />  
-      <Footer />
-      
+      <img src={urlImg} alt="Pokemon" />
     </div>
-
-    
-
   );
-  
-  
-  
 };
 
 export default PokemonDetail;
